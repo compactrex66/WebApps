@@ -1,0 +1,92 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+} 
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+    font-family: "SUSE";
+    overflow-x: hidden;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 30px;
+    background-color: rgb(14, 13, 13);
+    align-items: center;
+}
+.headerButtons {
+    display: flex;
+    gap: 50px;
+    font-size: 25px;
+}
+.headerButtons > * {
+    cursor: pointer;
+}
+.welcomeText {
+    font-size: 200px;
+    margin-left: 100px;
+    margin-bottom: 0;
+}
+.welcomeText2 {
+    font-size: 80px;
+    text-align: right;
+    margin-right: 40px;
+    margin-bottom: 150px;
+}
+.inputSearchBar {
+    width: 80vw;
+    box-shadow: 0px 0px 22px 1px rgba(10, 10, 10, 1);
+    background-color: rgb(14, 13, 13);
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 0;
+    color: white;
+    font-size: 30px;
+}
+.searchBar > i {
+    position: absolute;
+}
+.item {
+    width: 19vw;
+    height: fit-content;
+    min-height: 55vh;
+    object-fit: contain;
+    box-shadow: 0px 0px 22px 1px rgba(10, 10, 10, 1);
+    background-color: rgb(14, 13, 13);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.item > img {
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1;
+}
+.title {
+    font-size: 30px;
+}
+.price {
+    font-size: 30px;
+    align-self: flex-end;
+    margin-top: 40px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
