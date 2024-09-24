@@ -1,0 +1,24 @@
+﻿@page
+@using cw5.models
+@model cw5.Pages.IndexModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Strona razor page - index</h1>
+    <div>Dzisiaj mamy: @DateTime.Now.ToLongDateString()</div>
+    <ul>
+        @foreach(Person person in Model.People) {
+            <li>@person.FirstName @person.LastName @person.Age</li>
+        }
+    </ul>
+    <div id="root"></div>
+    <script src="~/index.js" defer></script>
+</body>
+</html>
