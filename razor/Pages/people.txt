@@ -1,0 +1,3 @@
+Jan,Kowalski,23
+Adam,Dąbrowski,45
+Anna,Połęcka,31

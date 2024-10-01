@@ -1,0 +1,37 @@
+﻿@page
+@using razor.models
+@model razor.Pages.IndexModel
+@using System;
+@using System.IO;
+@{
+    StreamReader sr = new StreamReader("Pages/people.txt");
+    List<Person> fileInput = new List<Person>();
+    string line;
+    while ((line = sr.ReadLine()) != null)
+    {
+        var oneLine = line.Split(',');
+        fileInput.Add(new Person {FirstName = oneLine[0], LastName = oneLine[1], Age = Convert.ToInt32(oneLine[2])});
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/site.css">
+    <title>Strona</title>
+</head>
+<body>
+    <h1>Strona</h1>
+    <button id="clickMeBtn">Click me</button>
+    <table>
+    @foreach(Person person infileInput) {
+        <tr>
+            <td>@person.FirstName</td> <td>@person.LastName</td> <td>@person.Age</td>
+        </tr>
+    }
+    </table>
+    <script src="~/site.js"></script>
+</body>
+</html>
