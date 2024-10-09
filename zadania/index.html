@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 20 elementów wypełnij całkowitymi od 1 - 9 -->
+    <script>
+        let arr = new Array(20);
+
+        for(let i = 0; i < arr.length; i++) {
+            arr[i] = Math.floor(Math.random() * 100 + 1)
+            document.write(arr[i] + " ") 
+        }
+
+        document.write("<br>")
+        arr.reverse();
+        for(let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + " ") 
+        }
+
+        arr.sort((element1, element2) => element1 - element2);
+        document.write("<br>")
+        for(let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + " ") 
+        }
+        
+        document.write("<br>")
+        let number = prompt("podaj liczbę")*1
+        if(arr.indexOf(number) != -1) {
+            document.write(`liczba ${number} jest na indeksie ${arr.indexOf(number)}`)
+        } else {
+            document.write("liczby nie ma")
+        }
+
+        let arr2 = arr.slice(5, 11);
+        document.write("<br>")
+        for(let i = 0; i < arr2.length; i++) {
+            document.write(arr2[i] + " ") 
+        }
+        document.write("<br>")
+        for(let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + " ") 
+        }
+        arr.splice(5, 6)
+        document.write("<br>")
+        for(let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + " ") 
+        }
+        document.write("<br>")
+        arr.push(333, 444, 555)
+        for(let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + " ") 
+        }
+        document.write("<br>" + arr.length + "<br>")
+        let string = arr.join("");
+        document.write(string)
+
+        document.write("<br>")
+        for(let i = 0; i < string.length; i++) {
+            if(string.charAt(i) == "2") {
+                document.write(string.charAt(i).sup())
+            } else {
+                document.write(string.charAt(i))
+            }
+        }
+    </script>
+</body>
+</html>
