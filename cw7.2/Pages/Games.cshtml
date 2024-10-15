@@ -1,0 +1,41 @@
+﻿@page
+@using cw7.Models
+@model cw7.Pages.GamesModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista Gier</h1>
+    <table>
+        <thead>
+            <th>Lp</th>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Release Date</th>
+            <th>Genre</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+            @{ int lp = 0; }
+            @foreach(var game in Model.Games) {
+                lp++;
+                <tr>
+                    <td>@lp</td>
+                    <td>@game.Title</td>
+                    <td>@game.Director</td>
+                    <td>@game.ReleaseDate</td>
+                    <td>@game.Genre</td>
+                    <td>@game.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <a asp-page="Games"></a>
+    </div>
+</body>
+</html>

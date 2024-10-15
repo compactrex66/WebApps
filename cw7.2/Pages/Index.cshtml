@@ -1,0 +1,41 @@
+﻿@page
+@model cw7.Pages.IndexModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista filmów</h1>
+    <table>
+        <thead>
+            <th>Lp</th>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Release Date</th>
+            <th>Genre</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+            @{ int lp = 0; }
+            @foreach(var movie in Model.Movies) {
+                lp++;
+                <tr>
+                    <td>@lp</td>
+                    <td>@movie.Title</td>
+                    <td>@movie.Director</td>
+                    <td>@movie.ReleaseDate</td>
+                    <td>@movie.Genre</td>
+                    <td>@movie.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <a asp-page="Games"></a>
+    </div>
+</body>
+</html>
